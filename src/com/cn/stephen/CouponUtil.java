@@ -7,6 +7,8 @@ import java.util.UUID;
 
 /**
  * 生成优惠码工具类
+ * 根据uuid生成的32位随机码
+ * 取模生成结果返回16位字符串
  * @author Administrator
  *
  */
@@ -21,6 +23,11 @@ public class CouponUtil {
 		"Y","Z"
 	};
 	
+	/**list去重每次检测花费大量时间
+	 * 
+	 * @param couponSize
+	 * @return
+	 */
 	public static List<String> createCoupon(int couponSize){
 		List<String> couponList=new ArrayList<String>();
 		while(couponList.size()<couponSize){
